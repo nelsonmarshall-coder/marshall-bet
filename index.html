@@ -1,0 +1,155 @@
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Marshall Bets</h1>
+  <p>Experience the thrill of sports betting</p>
+  <button class="bet-btn">Place Bet</button>
+</section>
+
+<!-- Navigation Menu -->
+<nav class="nav">
+  <ul>
+    <li><a href="#">Sports</a></li>
+    <li><a href="#">Live Betting</a></li>
+    <li><a href="#">My Account</a></li>
+  </ul>
+</nav>
+
+<!-- Sports Page -->
+<section class="sports">
+  <h2>Sports</h2>
+  <ul>
+    <li>
+      <img src="football.jpg" alt="Football">
+      <h3>Football</h3>
+    </li>
+    <li>
+      <img src="basketball.jpg" alt="Basketball">
+      <h3>Basketball</h3>
+    </li>
+  </ul>
+</section>
+
+<!-- Live Betting Page -->
+<section class="live-betting">
+  <h2>Live Betting</h2>
+  <ul>
+    <li>
+      <h3>Event 1</h3>
+      <p> Odds: 2.50</p>
+      <button class="bet-btn">Bet Now</button>
+    </li>
+  </ul>
+</section>
+
+<!-- My Account Page -->
+<section class="my-account">
+  <h2>My Account</h2>
+  <p>User Profile Information</p>
+  <p>Betting History</p>
+</section>
+
+
+styles.css
+
+body {
+  font-family: Open Sans, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  background-image: url('hero.jpg');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.nav {
+  background-color: #2E4053;
+  padding: 1em;
+  text-align: center;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav li {
+  margin-right: 20px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sports {
+  background-color: #f7f7f7;
+  padding: 2em;
+}
+
+.sports ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sports li {
+  margin-right: 20px;
+}
+
+.sports img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.live-betting {
+  background-color: #f7f7f7;
+  padding: 2em;
+}
+
+.live-betting ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.live-betting li {
+  margin-bottom: 20px;
+}
+
+.bet-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.my-account {
+  background-color: #f7f7f7;
+  padding: 2em;
+}
+
+
+script.js
+
+// Add event listeners to bet buttons
+document.querySelectorAll('.bet-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    // Toggle betting slip visibility
+    const bettingSlip = document.querySelector('.betting-slip');
+    bettingSlip.classList.toggle('visible');
+  });
+});
